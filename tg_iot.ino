@@ -33,7 +33,7 @@ void setup()
       delay(300);
   }
 
-  Serial.println(String("WiFi connected to IP: " + WiFi.localIP()));
+  Serial.println("WiFi connected to IP: " + String(WiFi.localIP()));
 }
 
 void loop() 
