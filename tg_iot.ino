@@ -102,19 +102,19 @@ void handle_mess (int num_new_mess)
     }
     if (t < 20)
     {
-      tgbot.sendMessage(chat_id, "Дома холодно. Включите полы или закройте окна.");
+      tgbot.sendMessage(chat_id, "Дома холодно. Включите подогрев пола или закройте окна." + String(t,1) + " градусов Цельсия");
     }
     if (h >= 50)
     {
-      tgbot.sendMessage(chat_id, "Дома высокая влажность. Проветрите квартиру.");
+      tgbot.sendMessage(chat_id, "Дома высокая влажность. Проветрите квартиру."+ String(h,1) + " %");
     }
     if (t >= 20)
     {
-      tgbot.sendMessage(chat_id, "Дома достигнута комнатная температура.");
+      tgbot.sendMessage(chat_id, "Дома достигнута комнатная температура." + String(t,1) + " градусов Цельсия");
     }
     if (h < 50)
     {
-      tgbot.sendMessage(chat_id, "Дома нормальная влажность. Можете заканчивать проветривание.");
+      tgbot.sendMessage(chat_id, "Дома нормальная влажность. Можете заканчивать проветривание."+ String(h,1) + " %");
     }
   }
 }
