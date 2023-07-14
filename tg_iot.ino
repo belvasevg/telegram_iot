@@ -88,7 +88,7 @@ void handle_mess (int num_new_mess)
       tgbot.sendMessage(chat_id, "Приветствую" + String(who_knocked) + "!");
       tgbot.sendMessage(chat_id, "Я бот Васи Белая./nМоя задача следить за домом./nЧтобы узнать как я могу тебе помочь, напиши \"help\" или \"/help\".");
     }
-    if (text == "/help" || "help")
+    if (text == "/help" || text == "help")
     {
       tgbot.sendMessage(chat_id, "/air - выведет показания температуры воздуха в квартире.");
       tgbot.sendMessage(chat_id, "/pressure - выведет показания давления воздуха в квартире.");
