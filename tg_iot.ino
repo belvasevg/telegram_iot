@@ -85,7 +85,7 @@ void handle_mess (int num_new_mess)
     }
     if (text == "/start" || text == "start")
     {
-      tgbot.sendMessage(chat_id, "Приветствую" + String(who_knocked) + "!");
+      tgbot.sendMessage(chat_id, "Приветствую, " + who_knocked + "!");
       tgbot.sendMessage(chat_id, "Я бот Васи Белая./nМоя задача следить за домом./nЧтобы узнать как я могу тебе помочь, напиши \"help\" или \"/help\".");
     }
     if (text == "/help" || text == "help")
