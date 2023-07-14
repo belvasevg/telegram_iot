@@ -96,7 +96,7 @@ void handle_mess (int num_new_mess)
       tgbot.sendMessage(chat_id, "/reflections - выведет планы автора по развитию своего бота.");
       tgbot.sendMessage(chat_id, "Команды можно писать без слэша слева и буквами любого регистра", "");
     }
-    if (text == "/reflections" || "reflections")
+    if (text == "/reflections" || text == "reflections")
     {
       tgbot.sendMessage(chat_id, "Планирую добавить датчик пламени, летучих соединений и датчик освещённости.");
     }
@@ -104,9 +104,17 @@ void handle_mess (int num_new_mess)
     {
       tgbot.sendMessage(chat_id, "Дома холодно. Включите полы или закройте окна.");
     }
-    if (h > 60)
+    if (h >= 50)
     {
       tgbot.sendMessage(chat_id, "Дома высокая влажность. Проветрите квартиру.");
+    }
+    if (t >= 20)
+    {
+      tgbot.sendMessage(chat_id, "Дома достигнута комнатная температура.");
+    }
+    if (h < 50)
+    {
+      tgbot.sendMessage(chat_id, "Дома нормальная влажность. Можете заканчивать проветривание.");
     }
   }
 }
